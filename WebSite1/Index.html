@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 295px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: green;
+        color: black;
+      }
+
+      ul.topnav li a.active {
+        background-color: green;
+      }
+
+      ul.topnav li.right {
+        float: right;
+      }
+
+      @media screen and (max-width: 600px) {
+        ul.topnav li.right,
+        ul.topnav li {
+          float: none;
+        }
+      }
+      h2{
+        color:red;
+        text-align:center;
+        }
+
+      table#gegevens {
+        border-collapse: collapse;
+        width: 50%;
+        table-layout: auto;
+        margin-left: 25%;
+            }
+      table#gegevens th ,td{
+        border: 2px solid black; 
+        Padding :8px
+      }
+      table#gegevens th {
+        background-color: Green;
+        color: white;
+      }
+      .center {
+  text-align: center;
+  color: green;
+              }
+      table#talen {
+        border-collapse: collapse;
+        width: 15%;
+        table-layout: auto;
+        margin-left: 42.5%;
+            }
+      table#talen th ,td{
+        border: 2px solid black; 
+        Padding :8px
+      }
+      table#talen tr:nth-child(even) {
+        background-color: #0ca72ec9;
+        color: white;
+        }
+      table#talen  tr:hover th ,table#talen  tr:hover td {
+        background-color: grey;
+        color: green;
+        }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="topnav">
+        <li><a class="active" href="Index.html">Index</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+     </div>
+     <div>
+      <h2> Wie ben ik?</h2>
+     </div>
+    <div>
+      <p1>
+          <table id="gegevens" >                     
+              <tr>
+                <th>Naam</th> 
+                <td>Jillis Tingen</td>
+                <tr>
+                <th>Studentnr. </td> 
+                <td>32852385</td>
+                <tr>
+                <th>Opleiding </td> 
+                <td>ITSM</td>
+                <tr>
+                <th>Klas</th>
+                <td>1F</td>
+                <tr>
+                <th>Telefoon</td>
+                <td>06 54974484</td>
+                <tr>
+                <th>E-mailadres</td>
+                <td>t.jillis@gmail.com</td>
+              </tr>
+            </table>
+      </p1>
+      <hr>
+      <h2>Mijn drijfveer</h2>
+      <div class="center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+      </div>  
+      <hr>
+
+      <div>
+        Mijn programeer talen:
+          <table id=talen>                     
+              <tr>
+                <caption><b>Talen</b></caption>
+                <th>HTML</th> 
+                <td><a href="https://en.wikipedia.org/wiki/HTML"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" style="width: 200px"; height="200px"></a> </td>
+                <tr>
+                <th>CSS </td> 
+                <td><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" style="width: 200px"; height="200px"></a></td>
+                <tr>
+                <th>C# </td> 
+                <td><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg" style="width: 200px"; height="200px"></a></td>
+                <tr>
+            </table>
+      </div>
+      <hr>
+
+    </div>
+  </body>
+</html>
