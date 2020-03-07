@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {margin: 0;}
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      ul.topnav li {float: left;}
+      
+      ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 298px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+  background-color: green;
+  color: black;
+}
+      
+      ul.topnav li a.active {background-color: green;}
+      
+      ul.topnav li.right {float: right;}
+      
+      @media screen and (max-width: 600px) {
+        ul.topnav li.right, 
+        ul.topnav li {float: none;}
+      }
+      
+
+        input[type=text] {
+          width: 50%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 2px solid green;
+          background-color: #f0eaeace;
+          }
+
+        textarea {
+          width: 50%;
+          height: 150px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 2px solid green;
+          border-radius: 4px;
+          background-color: #f0eaeace;
+          resize: none;
+          }
+
+        select {
+          width: 50%;
+          padding: 16px 20px;
+          border: 2px solid green;
+          border-radius: 4px;
+          background-color: #f0eaeace;
+          }
+
+          input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        .intro 
+        {margin-left: 1%}
+
+      </style>
+  </head>
+  <body>
+    <div>
+      <ul class="topnav">
+          <li><a href="Index.html">Index</a></li>
+          <li><a href="Hobby.html">Hobby</a></li>
+          <li><a class="active" href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class = "intro">
+        <p>Gebruik dit formulier om contact op te nemen:</p>
+      </div>
+      <div>
+        <Form>
+            <fieldset>
+          Naam: <br>
+          <input type="text" name="Naam"><br>
+          E-mail: <br>
+          <input type="text" name="E-mail"><br>
+          Onderwerp: <br>
+          <select name="Onderwerp">hobby’s, werk, info, overig, opleiding
+              <option value="Hobby’s">Hobby’s</option>
+              <option value="Werk">Werk</option>
+              <option value="Info">Info</option>
+              <option value="Opleiding">Opleiding</option>
+              <option value="Overig">Overig</option>
+            </select>
+            <br>
+            <br>
+            <textarea name="message" rows="20" cols="50">Waarom neem je contact op?</textarea>
+            <br>
+            <br>
+          <input type="submit">
+          </fieldset>
+        </Form>
+      </div>
+  </body>
+</html>
