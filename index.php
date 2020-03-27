@@ -32,7 +32,7 @@ function getFileList($dir)
                 'size' => filesize("{$dir}{$entry}"),
                 'lastmod' => filemtime("{$dir}{$entry}"),
                 'is_dir' => false,
-                'extension' => $pathInfo['extension']
+//                'extension' => $pathInfo['extension']
             ];
         }
     }
