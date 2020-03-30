@@ -23,7 +23,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
 
 // Include config file
-require_once "connectToDatabaseAndClose.php";
+require_once "ConToDB.php";
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -47,11 +47,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate credentials
-    if(empty($username_err) && empty($password_err)){
+    if(empty($username_err) && empty($password_err))
+    {
         // Prepare a select statement
         $sql = "SELECT id, username, password FROM wens.gebruikers WHERE username = :username";
 
-        if($stmt = $pdo->prepare($sql)){
+        if($stmt = $conn->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
 
@@ -82,7 +83,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $password_err = "The password you entered was not valid.";
                         }
                     }
-                } else{
+                } else
+                    {
                     // Display an error message if username doesn't exist
                     $username_err = "No account found with that username.";
                 }
@@ -96,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Close connection
-    unset($pdo);
+    unset($conn);
 }
 ?>
 

@@ -1,0 +1,40 @@
+body{
+width: 100%;
+height: 100%;
+margin: auto;
+}
+
+#page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.jumbotron{
+    background: none;
+    background-image: url(pics/banner.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    background-position: center;
+    justify-content: center;
+}
+
+#navbar{
+    margin-top: -40px;
+    color: white;
+    background-color: black;
+}
+
+#navbar a{
+    color: white;
+    padding: 10px;
+}
+
+h3{
+    display: flex;
+    flex-direction: row;
+    background-position: center;
+    justify-content: center;
+    margin-top: 50px;
+}

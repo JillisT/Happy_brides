@@ -67,7 +67,7 @@
 
 include("Navbar.html");
 
-require_once "connectToDatabaseAndClose.php";
+require_once "ConToDB.php";
 
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
@@ -83,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare a select statement
         $sql = "SELECT id FROM wens.gebruikers WHERE username = :username";
 
-        if($stmt = $pdo->prepare($sql)){
+        if($stmt = $conn->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, pdo::PARAM_STR);
 
@@ -131,7 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Prepare an insert statement
         $sql = "INSERT INTO wens.gebruikers (username, password) VALUES (:username, :password)";
 
-        if($stmt = $pdo->prepare($sql)){
+        if($stmt = $conn->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, pdo::PARAM_STR);
             $stmt->bindParam(":password", $param_password, pdo::PARAM_STR);
@@ -154,7 +154,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Close pdoection
-    unset($pdo);
+    unset($conn);
 }
 ?>
 

@@ -15,7 +15,7 @@
 <?php
 
 include("Navbar.html");
-include "connectToDatabaseAndClose.php";
+include "ConToDB.php";
 
 session_start();
 
@@ -189,7 +189,7 @@ finally
     }
 }
 $sqlselect = "SELECT Naam, KadoId FROM wens.gift WHERE id = $id";
-$stmtSelect = $pdo->prepare($sqlselect);
+$stmtSelect = $conn->prepare($sqlselect);
 //$stmtSelect->execute();
 //$rows = $stmtSelect->fetchAll();
 
