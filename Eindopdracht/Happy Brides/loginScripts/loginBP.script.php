@@ -1,15 +1,15 @@
 <?php
-// Check if the user is already logged in, if yes then redirect him to welcome page
+//Als de gebruiker al ingelogt is word hij verwezen naar wenslijst pagina
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: wenslijst.php");
     exit;
 }
 
-// Define variables and initialize with empty values
+
 $email = $wachtwoord = $lijstID = "";
 $email_err = $wachtwoord_err = "";
 
-// Processing form data when form is submitted
+// als er op inloggen wordt geklikt
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if username is empty
@@ -41,7 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
                 // Check if username exists, if yes then verify password
-                if ($stmt->rowCount() == 1) {
+                if ($stmt->rowCount() == 1)
+                {
                     if ($row = $stmt->fetch()) {
                         $id = $row["ID"];
                         $email = $row["email"];

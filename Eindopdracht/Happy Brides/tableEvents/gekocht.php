@@ -6,7 +6,7 @@ if (isset($_GET['ID'])) {
     $ID = $_GET['ID'];
 }
 
-//reorder de prioriteit na het weghalen van een item uit de lijst
+//Prioriteit opniew orderen
 $sql = $conn->prepare("SELECT prio FROM items WHERE ID = :ID");
 $sql->bindParam(":ID", $param_ID, PDO::PARAM_STR);
 $param_ID = trim($_GET["ID"]);
@@ -21,7 +21,7 @@ if ($sql->execute()) {
 } else echo "error";
 
 
-
+//Gekocht op ja zetten
 $stmt = $conn->prepare("UPDATE items SET prio = 0, gekocht = 'ja' where ID = :ID");
 
 $stmt->bindParam(":ID", $param_ID, PDO::PARAM_STR);
