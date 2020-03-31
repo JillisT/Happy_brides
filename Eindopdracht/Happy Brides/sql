@@ -1,0 +1,27 @@
+create table gast
+(
+    ID         int auto_increment
+        primary key,
+    email      tinytext null,
+    wachtwoord tinytext null,
+    lijstID    tinytext null
+);
+
+create table items
+(
+    ID      int auto_increment
+        primary key,
+    gekocht tinytext null,
+    prio    int      not null,
+    lijstID tinytext null,
+    naam    tinytext null
+);
+
+create table koppel
+(
+    ID         int auto_increment
+        primary key,
+    email      tinytext null,
+    wachtwoord tinytext null,
+    lijstID    tinytext null
+);
